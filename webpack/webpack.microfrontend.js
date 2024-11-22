@@ -4,7 +4,7 @@ const packageJson = require('../package.json');
 // Microfrontend api, should match across gateway and microservices.
 const apiVersion = '0.0.1';
 
-const sharedDefaults = { singleton: true, strictVersion: true, requiredVersion: apiVersion };
+const sharedDefaults = { singleton: true, strictVersion: false, requiredVersion: apiVersion };
 const shareMappings = (...mappings) => Object.fromEntries(mappings.map(map => [map, { ...sharedDefaults, version: apiVersion }]));
 
 const shareDependencies = ({ skipList = [] } = {}) =>

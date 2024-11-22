@@ -792,6 +792,32 @@
     </div>
   </div>
 </template>
-<script lang="ts" src="./home.component.ts"></script>
+<script>
+// 引入 Swiper 相关功能
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css'; // 引入 Swiper 的样式
 
-
+export default {
+  name: 'Home',
+  mounted() {
+    // 初始化 Swiper
+    new Swiper('.swiper-container', {
+      loop: true, // 开启循环模式
+      autoplay: {
+        delay: 3000, // 设置自动切换的延时为 3 秒
+      },
+      pagination: {
+        el: '.swiper-pagination',  // 指定分页器
+        clickable: true,            // 启用点击跳转
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',  // 下一页按钮
+        prevEl: '.swiper-button-prev',  // 上一页按钮
+      },
+      spaceBetween: 50, // 设置每个 slide 之间的间距（可根据需要调整）
+      slidesPerView: 1, // 设置每次显示多少个 slide
+      grabCursor: true, // 启用鼠标拖动效果
+    });
+  },
+};
+</script>
