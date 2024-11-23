@@ -5,49 +5,49 @@
         <div data-v-7cd33a07="" class="swiper-container swiper-container-initialized swiper-container-horizontal"> 
           <div class="swiper-wrapper" style="transform: translate3d(-2800px, 0px, 0px); transition-duration: 0ms;">
             <div data-v-7cd33a07="" class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5" style="width: 1400px;">
-              <img data-v-7cd33a07="" src="/content/images/upload/banner/demonstration-1.jpg">
+              <img data-v-7cd33a07="" src="/content/images/upload/banner/1a.jpg">
             </div>
             
             <div data-v-7cd33a07="" class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" style="width: 1400px;">
-              <img data-v-7cd33a07="" src="/content/images/upload/banner/6周年(1).jpg">
+              <img data-v-7cd33a07="" src="/content/images/upload/banner/2a.jpg">
             </div>
             
             <div data-v-7cd33a07="" class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 1400px;">
-              <img data-v-7cd33a07="" src="/content/images/upload/banner/独角鲸 - 副本(1)(1).jpg">
+              <img data-v-7cd33a07="" src="/content/images/upload/banner/3a.jpg">
             </div>
             
             <div data-v-7cd33a07="" class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 1400px;">
-              <img data-v-7cd33a07="" src="/content/images/upload/banner/独角鲸合作伙伴平台banner图1张(1).jpg">
+              <img data-v-7cd33a07="" src="/content/images/upload/banner/4a.jpg">
             </div>
             
             <div data-v-7cd33a07="" class="swiper-slide" data-swiper-slide-index="3" style="width: 1400px;">
-              <img data-v-7cd33a07="" src="/content/images/upload/banner/独角鲸 - 副本(1)(1).jpg">
+              <img data-v-7cd33a07="" src="/content/images/upload/banner/5a.jpg">
             </div>
             
             <div data-v-7cd33a07="" class="swiper-slide" data-swiper-slide-index="4" style="width: 1400px;">
-              <img data-v-7cd33a07="" src="/content/images/upload/banner/6周年(1).jpg">
+              <img data-v-7cd33a07="" src="/content/images/upload/banner/6a.jpg">
             </div>
             
             <div data-v-7cd33a07="" class="swiper-slide" data-swiper-slide-index="5" style="width: 1400px;">
-              <img data-v-7cd33a07="" src="/content/images/upload/banner/demonstration-1.jpg">
+              <img data-v-7cd33a07="" src="/content/images/upload/banner/1a.jpg">
             </div>
             
             <div data-v-7cd33a07="" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 1400px;">
-              <img data-v-7cd33a07="" src="/content/images/upload/banner/6周年(1).jpg">
+              <img data-v-7cd33a07="" src="/content/images/upload/banner/2a.jpg">
             </div>
           </div> 
           
           <div data-v-7cd33a07="" class="swiper-pagination center-pagination swiper-pagination-clickable swiper-pagination-bullets">
             <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
-            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2"></span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span>
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="1" role="button" aria-label="Go to slide 2"></span>
+            <span class="swiper-pagination-bullet" tabindex="2" role="button" aria-label="Go to slide 3"></span>
+            <span class="swiper-pagination-bullet" tabindex="3" role="button" aria-label="Go to slide 4"></span>
+            <span class="swiper-pagination-bullet" tabindex="4" role="button" aria-label="Go to slide 5"></span>
+            <span class="swiper-pagination-bullet" tabindex="5" role="button" aria-label="Go to slide 6"></span>
           </div> 
           
           <div data-v-7cd33a07="" class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div> 
-          <div data-v-7cd33a07="" class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div> 
+          <div data-v-7cd33a07="" class="swiper-button-next" tabindex="5" role="button" aria-label="Next slide"></div> 
           <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
       </div>
@@ -792,6 +792,7 @@
     </div>
   </div>
 </template>
+
 <script>
 // 引入 Swiper 相关功能
 import Swiper from 'swiper';
@@ -799,24 +800,28 @@ import 'swiper/swiper-bundle.css'; // 引入 Swiper 的样式
 
 export default {
   name: 'Home',
+  
   mounted() {
-    // 初始化 Swiper
-    new Swiper('.swiper-container', {
-      loop: true, // 开启循环模式
-      autoplay: {
-        delay: 3000, // 设置自动切换的延时为 3 秒
-      },
-      pagination: {
-        el: '.swiper-pagination',  // 指定分页器
-        clickable: true,            // 启用点击跳转
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',  // 下一页按钮
-        prevEl: '.swiper-button-prev',  // 上一页按钮
-      },
-      spaceBetween: 50, // 设置每个 slide 之间的间距（可根据需要调整）
-      slidesPerView: 1, // 设置每次显示多少个 slide
-      grabCursor: true, // 启用鼠标拖动效果
+    // 确保 DOM 更新后再初始化 Swiper
+    this.$nextTick(() => {
+      // 初始化 Swiper
+      new Swiper('.swiper-container', {
+        loop: true, // 开启循环模式
+        autoplay: {
+          delay: 3000, // 设置自动切换的延时为 3 秒
+        },
+        pagination: {
+          el: '.swiper-pagination',  // 指定分页器元素
+          clickable: true,            // 启用点击跳转功能
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',  // 下一页按钮
+          prevEl: '.swiper-button-prev',  // 上一页按钮
+        },
+        spaceBetween: 50,  // 每个 slide 之间的间距
+        slidesPerView: 1,  // 每次显示一个 slide
+        grabCursor: true,  // 启用鼠标拖动效果
+      });
     });
   },
 };
