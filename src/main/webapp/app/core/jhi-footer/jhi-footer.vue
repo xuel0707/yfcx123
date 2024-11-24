@@ -45,4 +45,133 @@
   </div>
 </template>
 
-<script lang="ts" src="./jhi-footer.component.ts"></script>
+<style scoped>
+.foot {
+    background: #2882de;
+    border-top: 5px solid #1395f3;
+}
+
+.color_f, .color_f:hover, .color_f a {
+    color: #fff;
+}
+
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.web_widht, .web_width {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+*+html .clearfix, html .clearfix {
+    zoom: 1;
+}
+
+.f_c_nav {
+    border-bottom: 1px solid #fff;
+}
+
+.pb_30 {
+    padding-bottom: 30px;
+}
+
+.pt_50 {
+    padding-top: 50px;
+}
+
+.left {
+    float: left;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.foot h6 {
+    font-weight: 400;
+}
+
+.font32 {
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.mb_10 {
+    margin-bottom: 10px;
+}
+
+.mt_10 {
+    margin-top: 10px;
+}
+
+.right {
+    float: right;
+}
+
+.color_f, .color_f:hover, .color_f a {
+    color: #fff;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
+.friendship[data-v-4f5650fa] {
+    width: 800px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.color_f, .color_f:hover, .color_f a {
+    color: #fff;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.pb_20 {
+    padding-bottom: 20px;
+}
+
+.pt_20 {
+    padding-top: 20px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.cop {
+    line-height: 50px;
+    background: #000;
+}
+
+.color_f, .color_f:hover, .color_f a {
+    color: #fff;
+}
+
+a {
+    /* color: #1a1a1a; */
+    text-decoration: none;
+    outline: none;
+    font-weight: normal;
+}
+
+
+</style>
