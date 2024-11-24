@@ -1,7 +1,5 @@
 import { createRouter as createVueRouter, createWebHistory } from 'vue-router';
 
-const Home = () => import('@/core/home/home.vue');
-const Error = () => import('@/core/error/error.vue');
 import admin from '@/router/admin';
 import entities from '@/router/entities';
 import pages from '@/router/pages';
@@ -13,18 +11,23 @@ export const createRouter = () =>
       {
         path: '/',
         name: 'Home',
-        component: Home,
+        component: () => import('@/core/home/home.vue'),
+      },
+      {
+        path: '/yffgl', // 路由路径
+        name: 'Yffgl',
+        component: () => import ('@/entities/yffgl/login.vue'), // 绑定组件
       },
       {
         path: '/forbidden',
         name: 'Forbidden',
-        component: Error,
+        component: () => import('@/core/error/error.vue'),
         meta: { error403: true },
       },
       {
         path: '/not-found',
         name: 'NotFound',
-        component: Error,
+        component: () => import('@/core/error/error.vue'),
         meta: { error404: true },
       },
       ...admin,

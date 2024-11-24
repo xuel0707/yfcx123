@@ -4,7 +4,7 @@
     <div class="city-header">
       <div class="header-content">
         <router-link to="/" class="logo">
-          <img src="/content/images/logo-4.png" alt="天策云">
+          <img src="/content/images/logo-4.png" alt="yfcx123">
         </router-link>
         <h1>选择城市</h1>
       </div>

@@ -1,7 +1,10 @@
 <template>
-  <jhi-navbar></jhi-navbar>
-  <home></home>
-  <jhi-footer></jhi-footer>
+  <router-view></router-view>
 </template>
 
-<script lang="ts" src="./app.component.ts"></script>
+<script>
+
+export default {
+  name: 'App',
+};
+</script>
