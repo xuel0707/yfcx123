@@ -16,7 +16,17 @@ export const createRouter = () =>
       {
         path: '/yffgl', // 路由路径
         name: 'Yffgl',
-        component: () => import ('@/entities/yffgl/login.vue'), // 绑定组件
+        component: () => import('@/entities/yffgl/entrance.vue'), // 绑定组件
+      },
+      {
+        path: '/yffgl/login', // 路由路径
+        name: 'Yffgl_login',
+        component: () => import('@/entities/yffgl/login.vue'), // 绑定组件
+      },
+      {
+        path: '/yffgl/register', // 路由路径
+        name: 'Yffgl_register',
+        component: () => import('@/entities/yffgl/register.vue'), // 绑定组件
       },
       {
         path: '/forbidden',

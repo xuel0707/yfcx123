@@ -767,7 +767,7 @@
   <jhi-footer></jhi-footer>  <!-- 底部内容始终显示 -->
 </template>
 
-<script>
+<script  lang="ts">
 // 引入 Swiper 相关功能
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css'; // 引入 Swiper 的样式
@@ -783,7 +783,8 @@ export default {
   methods: {
     // 跳转到 研发费管理 页面
     goToYffgl() {
-      this.$router.push({ name: 'Yffgl' });
+      // 打开一个新的空白网页标签
+      window.open('/yffgl', '_blank');
     },
   },
   mounted() {
