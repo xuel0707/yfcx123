@@ -519,6 +519,24 @@
     </body>
 </template>
 
+<script  lang="ts">
+
+export default {
+  name: 'Login',
+  components: {
+
+  },
+  methods: {
+
+  },
+  mounted() {
+    
+  },
+};
+
+
+</script>
+
 <style scoped>
 .login[data-v-3162a422] {
     /* display: -webkit-box; */

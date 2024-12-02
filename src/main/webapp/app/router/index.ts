@@ -14,19 +14,39 @@ export const createRouter = () =>
         component: () => import('@/core/home/home.vue'),
       },
       {
-        path: '/yffgl', // 路由路径
-        name: 'Yffgl',
-        component: () => import('@/entities/yffgl/entrance.vue'), // 绑定组件
+        path: '/bussiness', // 路由路径
+        name: 'Bussiness',
+        component: () => import('@/core/bussiness/bussiness.vue'), // 绑定组件
       },
       {
-        path: '/yffgl/login', // 路由路径
-        name: 'Yffgl_login',
-        component: () => import('@/entities/yffgl/login.vue'), // 绑定组件
+        path: '/news', // 路由路径
+        name: 'News',
+        component: () => import('@/core/news/news.vue'), // 绑定组件
       },
       {
-        path: '/yffgl/register', // 路由路径
-        name: 'Yffgl_register',
-        component: () => import('@/entities/yffgl/register.vue'), // 绑定组件
+        path: '/corperate', // 路由路径
+        name: 'Corperate',
+        component: () => import('@/core/corperate/corperate.vue'), // 绑定组件
+      },
+      {
+        path: '/tools', // 路由路径
+        name: 'Tools',
+        component: () => import('@/core/tools/tools.vue'), // 绑定组件
+      },
+      {
+        path: '/contact', // 路由路径
+        name: 'Contact',
+        component: () => import('@/core/contact/contact.vue'), // 绑定组件
+      },
+      {
+        path: '/login', // 路由路径
+        name: 'Login',
+        component: () => import('@/core/login/login.vue'), // 绑定组件
+      },
+      {
+        path: '/register', // 路由路径
+        name: 'Register',
+        component: () => import('@/core/register/register.vue'), // 绑定组件
       },
       {
         path: '/forbidden',

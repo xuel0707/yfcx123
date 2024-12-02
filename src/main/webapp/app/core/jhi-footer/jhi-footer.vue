@@ -27,6 +27,11 @@
 
             </div>
           </div>
+
+          <div class="weixin">
+            <img data-v-475356e7="" src="/content/images/customer_service/customer_service_20231113.png" alt="">
+            <p data-v-475356e7="">微信公众号</p>
+          </div>
         </div>
         
         <div data-v-4f5650fa="" class="font12 text_center pt_20 pb_20">
@@ -38,7 +43,7 @@
       </div>
       
       <div data-v-4f5650fa="" class="cop text_center">
-      版权所有 © 2018-2024 远方123
+      版权所有 ©2024 远方123
         <a data-v-4f5650fa="" href="https://beian.miit.gov.cn" target="_blank">粤ICP备19047291号 深圳市远方创新数据咨询有限公司版权所有</a>
       </div>
     </footer>
@@ -47,8 +52,8 @@
 
 <style scoped>
 .foot {
-    background: #2882de;
-    border-top: 5px solid #1395f3;
+    background: #ea7c07;
+    border-top: 5px solid #efeb09;
 }
 
 .color_f, .color_f:hover, .color_f a {
@@ -171,6 +176,10 @@ a {
     text-decoration: none;
     outline: none;
     font-weight: normal;
+}
+
+.weixin {
+    margin-left: 1000px;
 }
 
 
