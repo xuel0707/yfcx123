@@ -1,7 +1,9 @@
 <template>
-  <jhi-navbar></jhi-navbar>  <!-- 导航栏始终显示 -->
+    <div class="page-container">
+        <jhi-navbar class="nav"></jhi-navbar>  
 
-  <jhi-footer></jhi-footer>  <!-- 底部内容始终显示 -->
+        <jhi-footer class="footer"></jhi-footer>  
+    </div>
 </template>
 
 

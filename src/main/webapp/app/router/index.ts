@@ -39,9 +39,14 @@ export const createRouter = () =>
         component: () => import('@/core/contact/contact.vue'), // 绑定组件
       },
       {
-        path: '/login', // 路由路径
-        name: 'Login',
-        component: () => import('@/core/login/login.vue'), // 绑定组件
+        path: '/console', // 路由路径
+        name: 'Console',
+        component: () => import('@/core/console/console.vue'), // 绑定组件
+      },
+      {
+        path: '/ulogin', // 路由路径
+        name: 'Ulogin',
+        component: () => import('@/core/ulogin/ulogin.vue'), // 绑定组件
       },
       {
         path: '/register', // 路由路径

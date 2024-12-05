@@ -93,6 +93,7 @@
     "bootstrap-vue": "2.23.1",
     "dayjs": "1.11.13",
     "deepmerge": "4.3.1",
+    "element-plus": "^2.9.0",
     "pinia": "2.2.2",
     "swiper": "11.1.15",
     "vue": "3.5.6",

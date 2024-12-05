@@ -4,12 +4,13 @@
       <div data-v-0ac3ba95="" class="shortcut color_f">
         <div data-v-0ac3ba95="" class="web_width clearfix">
           <div data-v-0ac3ba95="" class="right sho_r">
-            <a data-v-0ac3ba95="" href="/login">控制台</a>
-            <a data-v-0ac3ba95="" href="/login">登录</a>
+            <a data-v-0ac3ba95="" href="/console">控制台</a>
+            <a data-v-0ac3ba95="" href="/ulogin">登录</a>
             <a data-v-0ac3ba95="" href="/register">免费注册</a>
           </div>
         </div>
       </div>
+      
       <div data-v-0ac3ba95="" class="web_width clearfix top_search bg_none">
         <div data-v-0ac3ba95="" class="logo left">
           <a data-v-0ac3ba95="" style="cursor: pointer">
@@ -48,7 +49,9 @@
   </div>
 </template>
 
-<script lang="ts" src="./jhi-navbar.component.ts"></script>
+<script lang="ts">
+
+</script>
 
 <style scoped>
 header.back_white {

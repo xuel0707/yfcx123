@@ -194,6 +194,8 @@
 
 import RegNavbar from '@/core/reg-navbar/reg-navbar.vue';
 import JhiFooter from '@/core/jhi-footer/jhi-footer.vue';
+import { ElCheckbox, ElCheckboxGroup, ElButton } from 'element-plus';
+import 'element-plus/dist/index.css';
 
 export default {
   name: 'Register',
@@ -201,6 +203,7 @@ export default {
     RegNavbar,
     JhiFooter, // 注册全局组件
   },
+
   methods: {
 
   },
