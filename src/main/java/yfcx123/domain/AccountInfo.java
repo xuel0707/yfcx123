@@ -1,72 +1,92 @@
 package yfcx123.domain;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
-import java.time.Instant;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import java.io.Serializable;
+import java.time.ZonedDateTime;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
+/**
+ * A AccountInfo.
+ */
+@Table("account_info")
+@SuppressWarnings("common-java:DuplicatedBlocks")
+public class AccountInfo implements Serializable {
 
-@Entity
-@Table(name = "account_info")
-public class AccountInfo extends AbstractAuditingEntity {
+    private static final long serialVersionUID = 1L;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column("id")
     private Long id;
 
-    @NotBlank
-    @Size(max = 100)
-    @Column(name = "company_name", length = 100, nullable = false)
+    @Column("account_id")
+    private Integer accountId;
+
+    @Column("company_name")
     private String companyName;
 
-    @NotBlank
-    @Size(min = 18, max = 18)
-    @Column(name = "social_credit_code", length = 18, unique = true, nullable = false)
+    @Column("social_credit_code")
     private String socialCreditCode;
 
-    @NotBlank
-    @Size(max = 50)
-    @Column(name = "entity_legal_person", length = 50, nullable = false)
+    @Column("entity_legal_person")
     private String entityLegalPerson;
 
-    @NotBlank
-    @Column(name = "password", nullable = false)
+    @Column("password")
     private String password;
 
-    @NotBlank
-    @Size(max = 255)
-    @Column(name = "fully_address", nullable = false)
+    @Column("fully_address")
     private String fullyAddress;
 
-    @NotBlank
-    @Size(max = 50)
-    @Column(name = "company_contact", length = 50, nullable = false)
+    @Column("company_contact")
     private String companyContact;
 
-    @NotBlank
-    @Pattern(regexp = "^1[3-9]\\d{9}$") // 手机号正则校验
-    @Column(name = "mobile_number", length = 20, nullable = false)
+    @Column("mobile_number")
     private String mobileNumber;
 
-    @Column(name = "account_status", columnDefinition = "TINYINT(1) DEFAULT 1")
-    private Integer accountStatus = 1; // 1-正常 0-冻结
+    @Column("account_status")
+    private Integer accountStatus;
 
-    // 继承 AbstractAuditingEntity 自动获得 createTime 和 updateTime
-    // 无需手动定义这两个字段
+    @Column("create_time")
+    private ZonedDateTime createTime;
 
-    // ------------------- Getters & Setters -------------------
+    @Column("update_time")
+    private ZonedDateTime updateTime;
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
-        return id;
+        return this.id;
+    }
+
+    public AccountInfo id(Long id) {
+        this.setId(id);
+        return this;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
+    public Integer getAccountId() {
+        return this.accountId;
+    }
+
+    public AccountInfo accountId(Integer accountId) {
+        this.setAccountId(accountId);
+        return this;
+    }
+
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
+    }
+
     public String getCompanyName() {
-        return companyName;
+        return this.companyName;
+    }
+
+    public AccountInfo companyName(String companyName) {
+        this.setCompanyName(companyName);
+        return this;
     }
 
     public void setCompanyName(String companyName) {
@@ -74,7 +94,12 @@ public class AccountInfo extends AbstractAuditingEntity {
     }
 
     public String getSocialCreditCode() {
-        return socialCreditCode;
+        return this.socialCreditCode;
+    }
+
+    public AccountInfo socialCreditCode(String socialCreditCode) {
+        this.setSocialCreditCode(socialCreditCode);
+        return this;
     }
 
     public void setSocialCreditCode(String socialCreditCode) {
@@ -82,7 +107,12 @@ public class AccountInfo extends AbstractAuditingEntity {
     }
 
     public String getEntityLegalPerson() {
-        return entityLegalPerson;
+        return this.entityLegalPerson;
+    }
+
+    public AccountInfo entityLegalPerson(String entityLegalPerson) {
+        this.setEntityLegalPerson(entityLegalPerson);
+        return this;
     }
 
     public void setEntityLegalPerson(String entityLegalPerson) {
@@ -90,16 +120,25 @@ public class AccountInfo extends AbstractAuditingEntity {
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
+    }
+
+    public AccountInfo password(String password) {
+        this.setPassword(password);
+        return this;
     }
 
     public void setPassword(String password) {
-        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        this.password = passwordEncoder.encode(password); // 加密密码
+        this.password = password;
     }
 
     public String getFullyAddress() {
-        return fullyAddress;
+        return this.fullyAddress;
+    }
+
+    public AccountInfo fullyAddress(String fullyAddress) {
+        this.setFullyAddress(fullyAddress);
+        return this;
     }
 
     public void setFullyAddress(String fullyAddress) {
@@ -107,7 +146,12 @@ public class AccountInfo extends AbstractAuditingEntity {
     }
 
     public String getCompanyContact() {
-        return companyContact;
+        return this.companyContact;
+    }
+
+    public AccountInfo companyContact(String companyContact) {
+        this.setCompanyContact(companyContact);
+        return this;
     }
 
     public void setCompanyContact(String companyContact) {
@@ -115,7 +159,12 @@ public class AccountInfo extends AbstractAuditingEntity {
     }
 
     public String getMobileNumber() {
-        return mobileNumber;
+        return this.mobileNumber;
+    }
+
+    public AccountInfo mobileNumber(String mobileNumber) {
+        this.setMobileNumber(mobileNumber);
+        return this;
     }
 
     public void setMobileNumber(String mobileNumber) {
@@ -123,10 +172,79 @@ public class AccountInfo extends AbstractAuditingEntity {
     }
 
     public Integer getAccountStatus() {
-        return accountStatus;
+        return this.accountStatus;
+    }
+
+    public AccountInfo accountStatus(Integer accountStatus) {
+        this.setAccountStatus(accountStatus);
+        return this;
     }
 
     public void setAccountStatus(Integer accountStatus) {
         this.accountStatus = accountStatus;
+    }
+
+    public ZonedDateTime getCreateTime() {
+        return this.createTime;
+    }
+
+    public AccountInfo createTime(ZonedDateTime createTime) {
+        this.setCreateTime(createTime);
+        return this;
+    }
+
+    public void setCreateTime(ZonedDateTime createTime) {
+        this.createTime = createTime;
+    }
+
+    public ZonedDateTime getUpdateTime() {
+        return this.updateTime;
+    }
+
+    public AccountInfo updateTime(ZonedDateTime updateTime) {
+        this.setUpdateTime(updateTime);
+        return this;
+    }
+
+    public void setUpdateTime(ZonedDateTime updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof AccountInfo)) {
+            return false;
+        }
+        return getId() != null && getId().equals(((AccountInfo) o).getId());
+    }
+
+    @Override
+    public int hashCode() {
+        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        return getClass().hashCode();
+    }
+
+    // prettier-ignore
+    @Override
+    public String toString() {
+        return "AccountInfo{" +
+            "id=" + getId() +
+            ", accountId=" + getAccountId() +
+            ", companyName='" + getCompanyName() + "'" +
+            ", socialCreditCode='" + getSocialCreditCode() + "'" +
+            ", entityLegalPerson='" + getEntityLegalPerson() + "'" +
+            ", password='" + getPassword() + "'" +
+            ", fullyAddress='" + getFullyAddress() + "'" +
+            ", companyContact='" + getCompanyContact() + "'" +
+            ", mobileNumber='" + getMobileNumber() + "'" +
+            ", accountStatus=" + getAccountStatus() +
+            ", createTime='" + getCreateTime() + "'" +
+            ", updateTime='" + getUpdateTime() + "'" +
+            "}";
     }
 }

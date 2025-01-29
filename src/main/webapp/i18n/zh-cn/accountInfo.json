@@ -1,0 +1,34 @@
+{
+  "yfcx123App": {
+    "accountInfo": {
+      "home": {
+        "title": "Account Infos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Account Info",
+        "createOrEditLabel": "创建或编辑 Account Info",
+        "notFound": "No Account Infos found"
+      },
+      "created": "Account Info { param } 创建成功",
+      "updated": "Account Info { param } 更新成功",
+      "deleted": "Account Info { param } 删除成功",
+      "delete": {
+        "question": "你确定要删除 Account Info { id } 吗？"
+      },
+      "detail": {
+        "title": "Account Info"
+      },
+      "id": "ID",
+      "accountId": "Account Id",
+      "companyName": "Company Name",
+      "socialCreditCode": "Social Credit Code",
+      "entityLegalPerson": "Entity Legal Person",
+      "password": "Password",
+      "fullyAddress": "Fully Address",
+      "companyContact": "Company Contact",
+      "mobileNumber": "Mobile Number",
+      "accountStatus": "Account Status",
+      "createTime": "Create Time",
+      "updateTime": "Update Time"
+    }
+  }
+}
