@@ -3,7 +3,6 @@ import { existsSync } from 'node:fs';
 import { defineConfig, normalizePath } from 'vite';
 
 import vue from '@vitejs/plugin-vue';
-import styleImport from 'vite-plugin-style-import';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 const getFileFromRepo = (file: string) =>
@@ -31,7 +30,6 @@ const config = defineConfig({
         },
       ],
     }),
-
   ],
   root: fileURLToPath(new URL('./src/main/webapp/', import.meta.url)),
   publicDir: fileURLToPath(new URL('./target/classes/static/public', import.meta.url)),

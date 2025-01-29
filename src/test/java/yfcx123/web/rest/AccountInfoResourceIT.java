@@ -430,10 +430,14 @@ class AccountInfoResourceIT {
         partialUpdatedAccountInfo.setId(accountInfo.getId());
 
         partialUpdatedAccountInfo
-            .accountId(UPDATED_ACCOUNT_ID)
-            .socialCreditCode(UPDATED_SOCIAL_CREDIT_CODE)
-            .password(UPDATED_PASSWORD)
-            .mobileNumber(UPDATED_MOBILE_NUMBER);
+            .companyName(UPDATED_COMPANY_NAME)
+            .entityLegalPerson(UPDATED_ENTITY_LEGAL_PERSON)
+            .fullyAddress(UPDATED_FULLY_ADDRESS)
+            .companyContact(UPDATED_COMPANY_CONTACT)
+            .mobileNumber(UPDATED_MOBILE_NUMBER)
+            .accountStatus(UPDATED_ACCOUNT_STATUS)
+            .createTime(UPDATED_CREATE_TIME)
+            .updateTime(UPDATED_UPDATE_TIME);
 
         webTestClient
             .patch()
