@@ -20,6 +20,22 @@ spring:
   config:
     activate:
       on-profile: '!api-docs'
+  datasource:
+    url: jdbc:mysql://localhost:3306/yf123?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # redis:
+  #   host: localhost
+  #   port: 6379
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update  # 选项有 create、create-drop、update、none
+    show-sql: true  # 打印 SQL 到控制台
+    properties:
+      hibernate:
+        format_sql: true  # 格式化 SQL
 springdoc:
   api-docs:
     enabled: false
@@ -196,4 +212,14 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+application:
+  # 阿里云短信服务配置（开发环境明文，生产环境需加密）
+  aliyun:
+    sms:
+      access-key-id: LTA15tRBBHaAF6cGqBbln6ed
+      access-key-secret: wDbp1GAWWsIFgCzEQNbTmPUfluTMRg
+      sign-name: "远方123"
+      template-code: "SMS_285020683"
+      code-expire: 300
+      send-limit: 3
+

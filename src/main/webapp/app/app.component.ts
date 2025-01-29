@@ -1,7 +1,6 @@
 import { defineComponent, provide } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Ribbon from '@/core/ribbon/ribbon.vue';
-import JhiFooter from '@/core/jhi-footer/jhi-footer.vue';
 import JhiNavbar from '@/core/jhi-navbar/jhi-navbar.vue';
 import LoginForm from '@/account/login-form/login-form.vue';
 
@@ -16,7 +15,6 @@ export default defineComponent({
     ribbon: Ribbon,
     'jhi-navbar': JhiNavbar,
     'login-form': LoginForm,
-    'jhi-footer': JhiFooter,
   },
   setup() {
     provide('alertService', useAlertService());

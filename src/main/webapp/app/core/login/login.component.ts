@@ -1,12 +1,11 @@
-import { type ComputedRef, defineComponent, inject, ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Ribbon from '@/core/ribbon/ribbon.vue';
 import LoginForm from '@/account/login-form/login-form.vue';
 import { useRouter } from 'vue-router';
 
-import type LoginService from '@/account/login.service';
-
 // 从 @element-plus/icons-vue 包中按需导入
+import { User, Lock } from '@element-plus/icons-vue';
 
 export default defineComponent({
   compatConfig: { MODE: 3 },
@@ -14,6 +13,8 @@ export default defineComponent({
   components: {
     ribbon: Ribbon,
     'login-form': LoginForm,
+    'User': User,
+    'Lock': Lock,
   },
   setup() {
     const username = ref('');
@@ -25,11 +26,11 @@ export default defineComponent({
     const handleLogin = () => {
       // 定义一个函数来设置样式
       function applyErrorDivStyles(element) {
-        element.style.zIndex = 99;
+        element.style.zIndex = 1;
         element.style.color = '#f56c6c';
         element.style.fontSize = '12px';
         element.style.lineHeight = '1';
-        element.style.paddingTop = '4px';
+        element.style.paddingTop = '2px';
         element.style.position = 'absolute';
         element.style.top = '100%';
         element.style.left = '0';

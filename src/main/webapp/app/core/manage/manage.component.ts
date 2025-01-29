@@ -3,7 +3,6 @@ import { useI18n } from 'vue-i18n';
 import Ribbon from '@/core/ribbon/ribbon.vue';
 import JhiNavbar from '@/core/jhi-navbar/jhi-navbar.vue';
 import TopNavbar from '@/core/top-navbar/top-navbar.vue';
-import JhiFooter from '@/core/jhi-footer/jhi-footer.vue';
 import type LoginService from '@/account/login.service';
 
 export default defineComponent({
@@ -13,7 +12,6 @@ export default defineComponent({
     'ribbon': Ribbon,
     'jhi-navbar': JhiNavbar,
     'top-navbar': TopNavbar,
-    'jhi-footer': JhiFooter,
   },
   setup() {
     const loginService = inject<LoginService>('loginService');

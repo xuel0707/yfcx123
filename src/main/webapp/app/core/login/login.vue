@@ -3,25 +3,28 @@
     <el-container>
       <el-main>
         <h2 class="login-area-title">远方123研发费管理系统</h2>
-        <el-form class="login-form" @submit.prevent="handleLogin">
+        <el-form class="login-form">
           <el-form-item>
-            <el-input v-model="username" placeholder="请输入账号" prefix-icon="User" />
+            <User style="width: 20px;"/>
+            <input v-model="username" placeholder="请输入账号" style="width:340px;"> 
           </el-form-item>
           <el-form-item>
-            <el-input v-model="password" type="password" placeholder="请输入密码" prefix-icon="Lock" />
+            <Lock style="width: 20px;"/>
+            <input v-model="password" type="password" placeholder="请输入密码" style="width:340px;">
           </el-form-item>
           <el-form-item>
             <el-row :gutter="20">
-              <el-col :span="12">
-                <el-input v-model="captcha" placeholder="请输入验证码" prefix-icon="Lock" />
+              <el-col :span="14">
+                <Lock style="width: 20px;"/>
+                <input v-model="captcha" placeholder="请输入验证码" style="width:100px;">
               </el-col>
-              <el-col :span="12">
+              <el-col :span="10">
                 <div class="verification-img">
                   <img 
                     src="/content/images/captcha.png" 
                     alt="加载验证码" 
                     @click="refreshCaptcha" 
-                    style="width: 110px; cursor: pointer; display: block"
+                    style="width: 90px; cursor: pointer; display: block"
                   />
                 </div>
               </el-col>
@@ -32,7 +35,7 @@
             <p class="login-link">
               <router-link to="/register">
                 <span>没有账号，立即注册</span>
-              </router-link>>
+              </router-link>
               <router-link to="/forget-pwd">
                 <span class="forget-pwd">忘记密码?</span>
               </router-link>
@@ -94,11 +97,21 @@ h2 {
 }
 
 .el-form-item {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 10;  /* 确保输入框在错误提示之上 */
 }
 
 .el-input {
   margin-bottom: 20px;
+}
+
+.el-input__inner {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px; /* 确保有足够的内边距 */
 }
 
 .login-btn {
