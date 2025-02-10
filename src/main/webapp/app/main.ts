@@ -4,6 +4,7 @@ import Vue, { computed, createApp, onMounted, provide, watch } from 'vue';
 import { createPinia, storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
 import ElementPlus from 'element-plus';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';
 import 'element-plus/dist/index.css';
 import App from './app.vue';
@@ -157,7 +158,7 @@ const app = createApp({
   },
 });
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-  app.component(key, component)
+  app.component(key, component);
 }
 initFortAwesome(app);
 
@@ -167,5 +168,7 @@ app
   .use(router)
   .use(pinia)
   .use(i18n)
-  .use(ElementPlus)
+  .use(ElementPlus, {
+    locale: zhCn,
+  })
   .mount('#app');

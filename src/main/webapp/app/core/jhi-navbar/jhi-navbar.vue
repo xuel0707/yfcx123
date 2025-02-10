@@ -25,20 +25,20 @@
       <span class="font-14">企业管理员</span>
       <span class="item">
         <el-icon><Setting /></el-icon>
-        界面设置 
+        界面设置
       </span>
       <el-divider direction="vertical" />
       <el-link :underline="false" href="/">
         <span class="item logout">
           <el-icon><SwitchButton /></el-icon>
-          退出 
+          退出
         </span>
       </el-link>
 
       <span class="item">
         <el-badge :value="4" class="item">
           <el-icon><Bell /></el-icon>
-          通知消息 
+          通知消息
         </el-badge>
       </span>
     </el-col>
@@ -55,7 +55,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 0px;
+  padding: 0 0 0 0;
   color: #fff;
   font-size: 14px;
 }

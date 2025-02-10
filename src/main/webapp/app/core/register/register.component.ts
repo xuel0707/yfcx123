@@ -1,8 +1,8 @@
 import { defineComponent, ref, computed, onBeforeUnmount } from 'vue';
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import Ribbon from '@/core/ribbon/ribbon.vue';
-import { pcaTextArr } from 'element-china-area-data'
+import { pcaTextArr } from 'element-china-area-data';
 import axios from 'axios';
 import { ElMessage, ElMessageBox } from 'element-plus';
 
@@ -12,9 +12,9 @@ export default defineComponent({
   compatConfig: { MODE: 3 },
   name: 'Register',
   components: {
-    'ribbon': Ribbon,
+    ribbon: Ribbon,
   },
-  
+
   setup() {
     const companyName = ref('');
     const socialCreditCode = ref('');
@@ -26,7 +26,7 @@ export default defineComponent({
     const mobileNumber = ref('');
     const smsCode = ref('');
     const isAgreed = ref(false);
-    const selectedOptions = ref<any[]>([]);  // 这里假设 selectedOptions 是一个数组
+    const selectedOptions = ref<any[]>([]); // 这里假设 selectedOptions 是一个数组
     // 短信验证相关状态
     const countdown = ref(0);
     const isValidMobile = ref(false);
@@ -35,17 +35,13 @@ export default defineComponent({
     const router = useRouter();
     const { t } = useI18n();
     const goToLogin = () => {
-      router.push('/')
-    }
-    
+      router.push('/');
+    };
+
     // 地址计算
     const fullyAddress = computed(() => {
-      const provinceCityArea = selectedOptions.value.length > 0 
-        ? selectedOptions.value.join(' ') 
-        : '';
-      return provinceCityArea 
-        ? `${provinceCityArea} ${detailedAddress.value}` 
-        : detailedAddress.value;
+      const provinceCityArea = selectedOptions.value.length > 0 ? selectedOptions.value.join(' ') : '';
+      return provinceCityArea ? `${provinceCityArea} ${detailedAddress.value}` : detailedAddress.value;
     });
 
     // 手机号验证
@@ -67,16 +63,19 @@ export default defineComponent({
           code: number;
           message: string;
           requestId?: string;
-        }>('/api/sms/send-code', {
-          mobile: mobileNumber.value,
-          templateCode: 'SMS_285020683' // 使用图片中的模板CODE
-        }, {
-          timeout: 3000, // 3秒超时设置
-          headers: {
-            'Content-Type': 'application/json;charset=UTF-8'
-          }
-        });
-
+        }>(
+          '/api/sms-code',
+          {
+            mobile: mobileNumber.value,
+            templateCode: 'SMS_285020683', // 使用图片中的模板CODE
+          },
+          {
+            timeout: 3000, // 3秒超时设置
+            headers: {
+              'Content-Type': 'application/json;charset=UTF-8',
+            },
+          },
+        );
 
         // 处理阿里云响应状态
         switch (data.code) {
@@ -85,7 +84,7 @@ export default defineComponent({
             ElMessage.success({
               message: '验证码已发送至您的手机，5分钟内有效',
               duration: 5000,
-              showClose: true
+              showClose: true,
             });
             break;
           case 429:
@@ -106,19 +105,17 @@ export default defineComponent({
           ['ECONNABORTED', '请求超时，请检查网络连接'],
           ['Network Error', '网络连接不可用'],
           ['ERR_BAD_REQUEST', '无效的请求参数'],
-          ['403', 'AccessKey验证失败']
+          ['403', 'AccessKey验证失败'],
         ]);
 
         const statusCode = error.response?.status;
         const errorCode = error.code || statusCode;
-        const errorMessage = errorMap.get(errorCode) 
-          || error.response?.data?.message 
-          || '服务暂时不可用，请稍后重试';
+        const errorMessage = errorMap.get(errorCode) || error.response?.data?.message || '服务暂时不可用，请稍后重试';
 
         ElMessage.error({
           message: `发送失败：${errorMessage}`,
           duration: 3000,
-          showClose: true
+          showClose: true,
         });
       }
     };
@@ -127,7 +124,7 @@ export default defineComponent({
     const startCountdown = (seconds: number = 60) => {
       countdown.value = seconds;
       if (timer.value) clearInterval(timer.value);
-      
+
       timer.value = setInterval(() => {
         if (countdown.value <= 0) {
           clearInterval(timer.value!);
@@ -153,14 +150,14 @@ export default defineComponent({
           ElMessage.warning('请同意用户协议');
           return;
         }
-    
+
         if (loginPassword.value !== verifyPassword.value) {
           ElMessage.error('两次输入的密码不一致');
           return;
         }
-    
+
         // 调用注册接口
-        await axios.post('/api/register/company-account', {
+        await axios.post('/api/register', {
           companyName: companyName.value,
           socialCreditCode: socialCreditCode.value,
           entityLegalPerson: entityLegalPerson.value,
@@ -168,15 +165,15 @@ export default defineComponent({
           fullyAddress: fullyAddress.value,
           companyContact: companyContact.value,
           mobileNumber: mobileNumber.value,
-          smsCode: smsCode.value
+          smsCode: smsCode.value,
         });
-    
+
         ElMessage.success('注册成功，请登录');
         router.push('/');
       } catch (error: any) {
         ElMessage.error(`注册失败: ${error.response?.data?.message || error.message}`);
       }
-    }
+    };
 
     return {
       // 表单字段
@@ -195,14 +192,13 @@ export default defineComponent({
       countdown,
       isValidMobile,
       timer,
-      
+
       // 计算属性
       fullyAddress,
 
-      
       // 方法
       goToLogin,
-      validateMobile, 
+      validateMobile,
       sendCode,
       onSubmit,
       t$: useI18n().t,

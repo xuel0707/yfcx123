@@ -1,10 +1,10 @@
 package yfcx123.service;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import java.time.Duration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 
 @Component
 public class VerificationCodeCache {
@@ -32,7 +32,7 @@ public class VerificationCodeCache {
 
     public boolean validateCode(String mobile, String code) {
         String storedCode = redisTemplate.opsForValue().get(keyPrefix + mobile);
-        
+
         // 如果验证码不存在，返回 false
         if (storedCode == null) {
             return false;
