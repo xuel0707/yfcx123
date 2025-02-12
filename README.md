@@ -12,10 +12,6 @@ $ docker container run --name jhipster -v /home/saas/yfcx123:/home/jhipster/app 
 # docker进入容器
 $ docker container exec -it --user root jhipster bash
 
-# 初始化安装（只执行一次）
-$ jhipster
-
-
 # 启动web服务
 $ npm start
 
