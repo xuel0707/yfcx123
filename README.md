@@ -6,10 +6,10 @@
 # ssh端口：8322
 
 
-# 运行容器：
+# 运行webapp容器：
 $ docker container run --name jhipster -v /home/saas/yfcx123:/home/jhipster/app -v ~/.m2:/home/jhipster/.m2 -p 8080:8080 -p 9000:9000 -p 3001:3001 -d -t jhipster/jhipster
 
-# docker进入app容器
+# docker进入webapp容器
 $ docker container exec -it --user root jhipster bash
 
 # 启动web服务
@@ -19,7 +19,6 @@ $ npm start
 # 登录密码admin/admin
 
 # 上传代码
-
 $ git add .
 
 $ git commit -m "Initial commit"
