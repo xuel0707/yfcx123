@@ -18,9 +18,12 @@ $ npm start
 # 访问前端界面 http://218.17.137.219:9083
 # 登录密码admin/admin
 
-#上传代码
+# 上传代码
+
 $ git add .
+
 $ git commit -m "Initial commit"
+
 $ git push origin main
 
 # 下载代码
