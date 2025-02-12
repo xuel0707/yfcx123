@@ -30,20 +30,9 @@ $ git push origin main
 $ git pull origin main
 
 
-#总体架构：
-/
-├── src/
-│   └── main/
-│       ├── java/            # Java 源代码
-│       ├── resources/       # 资源文件
-│       │   └── config/      # 配置文件目录
-│       │       ├── application.yml          # 主配置文件
-│       │       ├── application-dev.yml      # 开发环境配置
-│       │       └── application-prod.yml     # 生产环境配置
-│       └── webapp/         # Web资源
-├── target/                 # 编译输出目录
-└── pom.xml                # Maven 项目配置文件
+# 总体架构：
 
+![image](https://github.com/user-attachments/assets/068c623f-ebd9-496c-9f02-4e635bb4fccf)
 
 
 # 运行数据库容器
