@@ -9,7 +9,7 @@
 # 运行容器：
 $ docker container run --name jhipster -v /home/saas/yfcx123:/home/jhipster/app -v ~/.m2:/home/jhipster/.m2 -p 8080:8080 -p 9000:9000 -p 3001:3001 -d -t jhipster/jhipster
 
-# docker进入容器
+# docker进入app容器
 $ docker container exec -it --user root jhipster bash
 
 # 启动web服务
@@ -35,7 +35,7 @@ $ git pull origin main
 ![image](https://github.com/user-attachments/assets/068c623f-ebd9-496c-9f02-4e635bb4fccf)
 
 
-# 运行数据库容器
+# 运行mysql容器
 $ docker run -d --name mysql-server \
   -p 3306:3306 \
   -e MYSQL_ROOT_PASSWORD=123456 \
@@ -46,7 +46,7 @@ $ docker run -d --name mysql-server \
   --bind-address=0.0.0.0  
 
 
-# docker进入容器
+# docker进入mysql容器
 $ docker exec -it mysql-server mysql -u root -p
 
 # 创建数据库
