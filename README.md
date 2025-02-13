@@ -60,20 +60,20 @@ USE yf123;
 -- 创建账户信息表
 
 CREATE TABLE IF NOT EXISTS `account_info` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '账户唯一ID',
-  `companyName` VARCHAR(100) NOT NULL COMMENT '企业名称',
-  `socialCreditCode` CHAR(18) NOT NULL UNIQUE COMMENT '统一社会信用代码',
-  `entityLegalPerson` VARCHAR(50) NOT NULL COMMENT '企业法人',
-  `password` VARCHAR(255) NOT NULL COMMENT '加密密码',
-  `fullyAddress` VARCHAR(255) NOT NULL COMMENT '完整地址（省市区+详细地址）',
-  `companyContact` VARCHAR(50) NOT NULL COMMENT '企业联系人',
-  `mobileNumber` VARCHAR(20) NOT NULL COMMENT '手机号码',
-  `accountStatus` TINYINT(1) DEFAULT 1 COMMENT '账户状态（1-正常，0-冻结）',
-  `createTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `updateTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-  PRIMARY KEY (`id`),
-  INDEX `idx_social_credit_code` (`socialCreditCode`),
-  INDEX `idx_mobile` (`mobileNumber`)
+`id` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '账户唯一ID',
+`companyName` VARCHAR(100) NOT NULL COMMENT '企业名称',
+`socialCreditCode` CHAR(18) NOT NULL UNIQUE COMMENT '统一社会信用代码',
+`entityLegalPerson` VARCHAR(50) NOT NULL COMMENT '企业法人',
+`password` VARCHAR(255) NOT NULL COMMENT '加密密码',
+`fullyAddress` VARCHAR(255) NOT NULL COMMENT '完整地址（省市区+详细地址）',
+`companyContact` VARCHAR(50) NOT NULL COMMENT '企业联系人',
+`mobileNumber` VARCHAR(20) NOT NULL COMMENT '手机号码',
+`accountStatus` TINYINT(1) DEFAULT 1 COMMENT '账户状态（1-正常，0-冻结）',
+`createTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+`updateTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY (`id`),
+INDEX `idx_social_credit_code` (`socialCreditCode`),
+INDEX `idx_mobile` (`mobileNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='企业账户信息表';
 
 
