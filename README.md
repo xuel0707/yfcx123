@@ -1,9 +1,9 @@
 
 # 开发服务器 218.17.137.219
-# 用户名：saas
-# 密码：YF@saas2024
-# 80端口对外开放的是8383
-# ssh端口：8322
+用户名：saas
+密码：YF@saas2024
+80端口对外开放的是8383
+ssh端口：8322
 
 
 # 运行webapp容器：
@@ -16,7 +16,7 @@ $ docker container exec -it --user root jhipster bash
 $ npm start
 
 # 访问前端界面 http://218.17.137.219:9083
-# 登录密码admin/admin
+登录密码admin/admin
 
 # 上传代码
 $ git add .
@@ -58,6 +58,7 @@ USE yf123;
 1、register.vue组件的后端设计；
 
 -- 创建账户信息表
+
 CREATE TABLE IF NOT EXISTS `account_info` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '账户唯一ID',
   `companyName` VARCHAR(100) NOT NULL COMMENT '企业名称',
@@ -74,6 +75,7 @@ CREATE TABLE IF NOT EXISTS `account_info` (
   INDEX `idx_social_credit_code` (`socialCreditCode`),
   INDEX `idx_mobile` (`mobileNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='企业账户信息表';
+
 
 查看表结构
 DESCRIBE account_info;
