@@ -20,7 +20,9 @@ $ docker container exec -it --user root jhipster bash
 # 启动web服务
 $ npm start
 
-# 访问前端界面 http://218.17.137.219:9083
+# 访问前端界面
+浏览器访问:http://218.17.137.219:9083
+
 登录密码admin/admin
 
 # 运行mysql容器
