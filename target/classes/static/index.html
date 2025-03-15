@@ -1,0 +1,350 @@
+<!doctype html>
+<html class="no-js" lang="zh-cn" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>远方123·研发费管理系统</title>
+    <meta name="description" content="Description for yfcx123" />
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/assets/favicon-DssFjAfq.ico" />
+    <link rel="manifest" href="/assets/manifest-BvIAIXAE.webapp" />
+    <!-- <link rel="stylesheet" href="content/css/loading.css" /> -->
+    <!-- Workaround https://github.com/axios/axios/issues/5622 -->
+    <link href="css/app.8055c78b.css" rel="stylesheet">
+    <script>
+      const global = globalThis;
+    </script>
+    <!-- Load vue main -->
+    <script src="https://hm.baidu.com/hm.js?2da425d7fd1916a4ba321705dcff61e0"></script>
+    <script src="https://hm.baidu.com/hm.js?2da425d7fd1916a4ba321705dcff61e0"></script>
+    <script src="/content/static/js/base-loading.js"></script>
+    <!-- jhipster-needle-add-resources-to-root - JHipster will add new resources here -->
+    <style type="text/css">.distpicker-address-wrapper{color:#9caebf}.distpicker-address-wrapper select{padding:.5rem .75rem;height:40px;font-size:1rem;line-height:1.25;color:#464a4c;background-color:#fff;background-image:none;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid rgba(0,0,0,0.15);border-radius:.25rem;-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s}.distpicker-address-wrapper select option{font-weight:normal;display:block;white-space:pre;min-height:1.2em;padding:0px 2px 1px}.distpicker-address-wrapper ul{margin:0;padding:0}.distpicker-address-wrapper ul li{list-style:none}.distpicker-address-wrapper .address-header{background-color:#fff}.distpicker-address-wrapper .address-header ul{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}.distpicker-address-wrapper .address-header ul li{display:inline-block;padding:10px 10px 7px}.distpicker-address-wrapper .address-header ul li.active{border-bottom:#52697f solid 3px;color:#52697f}.distpicker-address-wrapper .address-container{background-color:#fff}.distpicker-address-wrapper .address-container ul{height:100%;overflow:auto}.distpicker-address-wrapper .address-container ul li{padding:8px 10px;border-top:1px solid #f6f6f6}.distpicker-address-wrapper .address-container ul li.active{color:#52697f}.disabled-color{background:#f8f8f8}
+    </style>
+    <style type="text/css">
+      .vue-cropper[data-v-8ed66ddc] {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      direction: ltr;
+      -ms-touch-action: none;
+          touch-action: none;
+      text-align: left;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC");
+      }
+      .cropper-box[data-v-8ed66ddc],
+      .cropper-box-canvas[data-v-8ed66ddc],
+      .cropper-drag-box[data-v-8ed66ddc],
+      .cropper-crop-box[data-v-8ed66ddc],
+      .cropper-face[data-v-8ed66ddc] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      }
+      .cropper-box-canvas img[data-v-8ed66ddc] {
+      position: relative;
+      text-align: left;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      -webkit-transform: none;
+              transform: none;
+      max-width: none;
+      max-height: none;
+      }
+      .cropper-box[data-v-8ed66ddc] {
+      overflow: hidden;
+      }
+      .cropper-move[data-v-8ed66ddc] {
+      cursor: move;
+      }
+      .cropper-crop[data-v-8ed66ddc] {
+      cursor: crosshair;
+      }
+      .cropper-modal[data-v-8ed66ddc] {
+      background: rgba(0, 0, 0, 0.5);
+      }
+      .cropper-crop-box[data-v-8ed66ddc] {
+      /*border: 2px solid #39f;*/
+      }
+      .cropper-view-box[data-v-8ed66ddc] {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      outline: 1px solid #39f;
+      outline-color: rgba(51, 153, 255, 0.75);
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      }
+      .cropper-view-box img[data-v-8ed66ddc] {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      text-align: left;
+      max-width: none;
+      max-height: none;
+      }
+      .cropper-face[data-v-8ed66ddc] {
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      opacity: 0.1;
+      }
+      .crop-info[data-v-8ed66ddc] {
+      position: absolute;
+      left: 0px;
+      min-width: 65px;
+      text-align: center;
+      color: white;
+      line-height: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 12px;
+      }
+      .crop-line[data-v-8ed66ddc] {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      }
+      .line-w[data-v-8ed66ddc] {
+      top: -3px;
+      left: 0;
+      height: 5px;
+      cursor: n-resize;
+      }
+      .line-a[data-v-8ed66ddc] {
+      top: 0;
+      left: -3px;
+      width: 5px;
+      cursor: w-resize;
+      }
+      .line-s[data-v-8ed66ddc] {
+      bottom: -3px;
+      left: 0;
+      height: 5px;
+      cursor: s-resize;
+      }
+      .line-d[data-v-8ed66ddc] {
+      top: 0;
+      right: -3px;
+      width: 5px;
+      cursor: e-resize;
+      }
+      .crop-point[data-v-8ed66ddc] {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      opacity: 0.75;
+      background-color: #39f;
+      border-radius: 100%;
+      }
+      .point1[data-v-8ed66ddc] {
+      top: -4px;
+      left: -4px;
+      cursor: nw-resize;
+      }
+      .point2[data-v-8ed66ddc] {
+      top: -5px;
+      left: 50%;
+      margin-left: -3px;
+      cursor: n-resize;
+      }
+      .point3[data-v-8ed66ddc] {
+      top: -4px;
+      right: -4px;
+      cursor: ne-resize;
+      }
+      .point4[data-v-8ed66ddc] {
+      top: 50%;
+      left: -4px;
+      margin-top: -3px;
+      cursor: w-resize;
+      }
+      .point5[data-v-8ed66ddc] {
+      top: 50%;
+      right: -4px;
+      margin-top: -3px;
+      cursor: e-resize;
+      }
+      .point6[data-v-8ed66ddc] {
+      bottom: -5px;
+      left: -4px;
+      cursor: sw-resize;
+      }
+      .point7[data-v-8ed66ddc] {
+      bottom: -5px;
+      left: 50%;
+      margin-left: -3px;
+      cursor: s-resize;
+      }
+      .point8[data-v-8ed66ddc] {
+      bottom: -5px;
+      right: -4px;
+      cursor: se-resize;
+      }
+      @media screen and (max-width: 500px) {
+      .crop-point[data-v-8ed66ddc] {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        opacity: 0.45;
+        background-color: #39f;
+        border-radius: 100%;
+      }
+      .point1[data-v-8ed66ddc] {
+        top: -10px;
+        left: -10px;
+      }
+      .point2[data-v-8ed66ddc],
+      .point4[data-v-8ed66ddc],
+      .point5[data-v-8ed66ddc],
+      .point7[data-v-8ed66ddc] {
+        display: none;
+      }
+      .point3[data-v-8ed66ddc] {
+        top: -10px;
+        right: -10px;
+      }
+      .point4[data-v-8ed66ddc] {
+        top: 0;
+        left: 0;
+      }
+      .point6[data-v-8ed66ddc] {
+        bottom: -10px;
+        left: -10px;
+      }
+      .point8[data-v-8ed66ddc] {
+        bottom: -10px;
+        right: -10px;
+      }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/app-sWctXk48.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/app-Bdzaycfe.css">
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+    <div id="loadingDiv" style="position: fixed; left: 44%; top: 50%; width: 280px; opacity: 1; z-index: 10000; display: none;">
+      <div style="position: absolute; cursor1: wait; width: auto; height: 57px; line-height: 57px; padding-left: 50px; padding-right: 5px; background:url(/assets/loading-BUlsSCsM.gif) no-repeat scroll 5px 10px; color: #696969; font-family:'Microsoft YaHei';">数据加载中，请等待...</div>
+    </div>
+    <div id="app">
+      <div class="app-loading">
+        <div class="lds-pacman">
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="app-loading">
+        <div id="jhipster-error" style="display: none">
+          <!-- This content is for troubleshooting purpose and will be removed when app renders -->
+          <h1>An error has occurred :-(</h1>
+          <h2>Usual error causes</h2>
+          <ol>
+            <li>
+              You started the application from an IDE and you didn't run <code style="color: red">npm start</code> or
+              <code style="color: red">npm run webapp:build</code>.
+            </li>
+            <li>
+              You had a network error while running <code style="color: red">npm install</code>. If you are behind a corporate proxy, it is
+              likely that this error was caused by your proxy. Have a look at the JHipster error logs, you will probably have the cause of
+              the error.
+            </li>
+            <li>
+              You installed a Node.js version that doesn't work with JHipster: please use an LTS (long-term support) version, as it's the
+              only version we support.
+            </li>
+          </ol>
+          <h2>Building the client side code again</h2>
+          <p>If you want to go fast, run <code style="color: red">./mvnw</code> to build and run everything.</p>
+          <p>If you want to have more control, so you can debug your issue more easily, you should follow the following steps:</p>
+          <ol>
+            <li>Install npm dependencies with the command <code style="color: red">npm install</code></li>
+            <li>
+              Build the client with the command <code style="color: red">npm run webapp:build</code> or
+              <code style="color: red">npm start</code>
+            </li>
+            <li>Start the server with <code style="color: red">./mvnw</code> or using your IDE</li>
+          </ol>
+
+          <h2>Getting more help</h2>
+
+          <h3>If you have a question on how to use JHipster</h3>
+          <p>
+            Go to Stack Overflow with the
+            <a href="http://stackoverflow.com/tags/jhipster" target="_blank" rel="noopener noreferrer">"jhipster"</a> tag.
+          </p>
+
+          <h3>If you have a bug or a feature request</h3>
+          <p>
+            First read our
+            <a href="https://github.com/jhipster/generator-jhipster/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer"
+              >contributing guidelines</a
+            >.
+          </p>
+          <p>
+            Then, fill a ticket on our
+            <a href="https://github.com/jhipster/generator-jhipster/issues/new/choose" target="_blank" rel="noopener noreferrer"
+              >bug tracker</a
+            >, we'll be happy to resolve your issue!
+          </p>
+
+          <h3>If you want to chat with contributors and other users</h3>
+          <p>
+            Join our chat room on
+            <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">Gitter.im</a>. Please note
+            that this is a public chat room, and that we expect you to respect other people and write in a correct English language!
+          </p>
+          <!-- end of troubleshooting content -->
+        </div>
+      </div>
+    </div>
+    <noscript>
+      <h1>You must enable JavaScript to view this page.</h1>
+    </noscript>
+    <script type="text/javascript">
+      // show an error message if the app loading takes more than 4 sec
+      window.onload = function () {
+        setTimeout(showError, 4000);
+      };
+      function showError() {
+        var errorElm = document.getElementById('jhipster-error');
+        if (errorElm?.style) {
+          errorElm.style.display = 'block';
+        }
+      }
+    </script>
+  </body>
+</html>

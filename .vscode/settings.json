@@ -1,0 +1,5 @@
+{
+  "DockerRun.DisableDockerrc": true,
+  "DockerRun.Containers": ["d30dd25e58c3"],
+  "files.autoSave": "afterDelay"
+}

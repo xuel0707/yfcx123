@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "application",
+      "type": "yfcx123.config.ApplicationProperties",
+      "sourceType": "yfcx123.config.ApplicationProperties"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

@@ -1,0 +1,1 @@
+import{d as e,_ as t,g as s,f as a}from"./app-sWctXk48.js";const o=e({compatConfig:{MODE:3},name:"JhiDocs"}),r={src:"/swagger-ui/index.html",width:"100%",height:"900",seamless:"",target:"_top",title:"Swagger UI",class:"border-0","data-cy":"swagger-frame"};function c(n,i,d,_,f,m){return a(),s("iframe",r)}const g=t(o,[["render",c]]);export{g as default};

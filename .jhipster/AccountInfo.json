@@ -1,0 +1,67 @@
+{
+  "annotations": {
+    "changelogDate": "20250129083231"
+  },
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "accountId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "companyName",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "socialCreditCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entityLegalPerson",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "fullyAddress",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "companyContact",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "mobileNumber",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "accountStatus",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": []
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "AccountInfo",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}
